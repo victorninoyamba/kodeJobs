@@ -16,13 +16,20 @@ use App\Models\Listing;
 |
 */
 
+//Common Resource Routes/Naming
+//index - Show all data -> listings || Route::get();
+//show - Show single data -> listing || Route::get();
+//create - Show form to create new -> listing || Route::post()
+//store - Store data -> new listing
+//edit - show form to edit data || Route::put(); Route::patch();
+//update - Update data -> listing
+//destroy - Delete a data -> listing     Route::delete();
+
 //All listings
 Route::get('/', [ListingController::class, 'index']);
 
 //Single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
-
-//Common Resource Routes/Naming
 
 
 
