@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('tags');
-            $table->string('company');
-            $table->string('location');
-            $table->string('email');
-            $table->string('website');
-            $table->text('description');            
+            $table->string('logo')->nullable();
+            $table->string('tags');            
+            $table->string('company');           
+            $table->string('location');            
+            $table->string('email');            
+            $table->string('website');            
+            $table->text('description');
             $table->timestamps();
         });
     }
