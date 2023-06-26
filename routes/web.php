@@ -21,8 +21,8 @@ use App\Models\Listing;
 //show - Show single data -> listing || Route::get();
 //create - Show form to create new -> listing  || Route::get();
 //store - Store data -> new listing || Route::post()
-//edit - show form to edit data || Route::put(); Route::patch();
-//update - Update data -> listing
+//edit - show form to edit data 
+//update - Update data -> listing || Route::put(); Route::patch();
 //destroy - Delete a data -> listing     Route::delete();
 
 //All listings
@@ -33,6 +33,15 @@ Route::get('/listings/create', [ListingController::class, 'create']);
 
 //Store Listing data
 Route::post('/listings', [ListingController::class, 'store']);
+
+//Show Edit Form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+
+//Update Listing
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
+//Delete Listing
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 
 
 
